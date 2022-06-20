@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>지반모델링 과정 - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">지반모델링 과정</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../about/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">지반모델링 과정</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">지반모델링 과정</h1>
+<p><a href="craftdocs://open?blockId=3ED76071-0CF3-4E84-85C4-DE4882688033&amp;spaceId=a0fd7e7f-daf8-aea9-20ea-3a82f3ba608b">#ADD</a></p>
+<hr />
+<ul>
+<li>Info</li>
+<li>Summary:</li>
+<li>Things: <a href="things:///show?id=72XK5eaixZFseXa9S98YGS">things:///show?id=72XK5eaixZFseXa9S98YGS</a></li>
+<li>Next steps:</li>
+<li>Deliberate(s):</li>
+<li>Related:</li>
+<li>Check-in:</li>
+<li>Soft deadline: <a href="day://2022.07.31">7월 31일 (일)</a></li>
+<li>Hard deadline:</li>
+<li>Outcome:</li>
+<li>python을 이용하여 ppv, pvs(최대벡터합)에 대해 자승근, 삼승근을 적용하여 검토한 결과,</li>
+<li>ppv, pvs 크기 차이가 있으나 폭원크기와 댐핑을 이용한 매칭에 문제 없음.</li>
+<li>삼승근의 경우 추정식의 가운데 구간이 아래로 더 많이 처짐. 즉 양끝을 맞추는 지금 방식에서는 삼승근이 오차가 클 수 밖에 없음.</li>
+<li>::환산거리::<ul>
+<li>환산거리로서 제곱근과 세제곱근 가운데 어느 것을 사용할 것인지는 각각의 방식으로 계측자료를 처리한 결과로부터 적합도가 높은 쪽을 택하는 방식으로 결정.</li>
+<li>이것은 통계학적인 관점에서의 원칙이며 자료 범위에서만 적용하고 외삽은 하지 않음.</li>
+<li>경험적으로 넓은 노천발파 현장의 경우 제곱근 환산거리 기법을 많이 사용하며 진동영향 평가 대상이 표고차가 있는 경우에는 봉상장약 이론을 기반으로 하는 세제곱근 환산거리 기법을 많이 사용함.</li>
+</ul>
+</li>
+<li>최병희 박사님 협의 결과</li>
+</ul>
+<p>발파해석을 위한 지반물성 적용값</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>시흥시</th>
+<th>Pasir</th>
+<th>한일시멘트</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rock type</td>
+<td>granite</td>
+<td>sandstone</td>
+<td>limestone</td>
+</tr>
+<tr>
+<td>density (kg/m3)</td>
+<td>2.57</td>
+<td>2.156</td>
+<td>2.72</td>
+</tr>
+<tr>
+<td>elastic modulus (GPa)</td>
+<td>27.3</td>
+<td>1.38</td>
+<td>26.0</td>
+</tr>
+<tr>
+<td>Poisson's ratio</td>
+<td>0.33</td>
+<td>0.25</td>
+<td>0.19</td>
+</tr>
+<tr>
+<td>Cohesion (MPa)</td>
+<td>9.7</td>
+<td>5</td>
+<td>1.90</td>
+</tr>
+<tr>
+<td>Friction angle (deg)</td>
+<td>48</td>
+<td>45</td>
+<td>38</td>
+</tr>
+<tr>
+<td>tensile strength (MPa)</td>
+<td>4.8</td>
+<td>2.5</td>
+<td>0.80</td>
+</tr>
+</tbody>
+</table>
+<p>KIGAM, 1993, 시흥 은행지구 택지개발사업 발파영향평가 및 발파공법 연구</p>
+<p>KIGAM, 2008, 대규모 석탄 노천광의 연약사면 안정성 및 생산성 향상 연구</p>
+<p>KIGAM, 2015, 한일시멘트 단양공장 지하 CR룸에 대한 발파진동 영향평가</p>
+<table>
+<thead>
+<tr>
+<th>항 목</th>
+<th></th>
+<th><strong>시흥시</strong></th>
+<th><strong>Pasir</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>천공</td>
+<td>천공직경 m</td>
+<td>0.035</td>
+<td>0.2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>천공심도 m</td>
+<td>1.4-1.6</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>공당장약량</td>
+<td>함수폭약 K-300, 250g/ea</td>
+<td>ANFO(초유폭약) 100 kg/ hole</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>장약량</td>
+<td>0.641 kg/m</td>
+<td>28.57 kg/m</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>직경 m</td>
+<td>0.028</td>
+<td>0.2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>길이 m</td>
+<td>0.39</td>
+<td>3.54 *1</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>전색</td>
+<td>암분전색</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>시추공</td>
+<td>등가직경 m *2</td>
+<td>0.21</td>
+<td>1.2</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>굴착심도 m</td>
+<td>1.6</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>폭원작용 구간 심도 m</td>
+<td></td>
+<td>1.1-1.5 (0.4)</td>
+<td>5.5-9 (3.5)</td>
+<td></td>
+</tr>
+<tr>
+<td>측정위치</td>
+<td></td>
+<td>벽면으로부터 6-14 m, 1 m 간격으로 9 포인트</td>
+<td>공벽면으로부터 40-54 m, 2 m 간격으로 8 포인트</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>ANFO 밀도 900 kg/m3, 무게 100 kg으로부터 부피 추정. 직경 0.2 m일 때 높이는 약 3.54 m</li>
+<li>등가직경은 천공직경의 6배로 가정</li>
+</ol></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
